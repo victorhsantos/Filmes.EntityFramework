@@ -6,11 +6,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20220201215546_Inical.cs" />
+    <Compile Remove="Migrations\20220201215546_Inical.Designer.cs" />
+    <Compile Remove="Migrations\20220201220350_Inicial.cs" />
+    <Compile Remove="Migrations\20220201220350_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20220201221609_Inicial.cs" />
+    <Compile Remove="Migrations\20220201221609_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20220201223741_Inicial.cs" />
+    <Compile Remove="Migrations\20220201223741_Inicial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="System.Data.SqlClient" Version="4.4.0" />
     <PackageReference Include="System.Linq" Version="4.1.0" />
     <PackageReference Include="System.Linq.Expressions" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

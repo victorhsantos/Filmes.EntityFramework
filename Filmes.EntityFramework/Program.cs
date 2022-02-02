@@ -1,21 +1,23 @@
-﻿using Filmes.EntityFramework.Dados;
+﻿using System;
+using System.Linq;
+using Filmes.EntityFramework.Dados;
 using Filmes.EntityFramework.Extensions;
-using System;
+using Filmes.EntityFramework.Negocio;
+using Microsoft.EntityFrameworkCore;
 
 namespace Filmes.EntityFramework
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            //select * from actor
             using (var contexto = new FilmesContexto())
             {
                 contexto.LogSQLToConsole();
-
-                foreach (var ator in contexto.Atores)
+                
+                foreach (var filme in contexto.Filmes)
                 {
-                    System.Console.WriteLine(ator);
+                    Console.WriteLine(filme);
                 }
             }
         }
